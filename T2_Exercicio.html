@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Quarto Exercicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <style type = "text/css">
+            body{
+                background-color: rgb(160,180,200);
+            }
+            label{
+                 /* estilo da fonte como negrito */
+                font-weight: bold;
+                /* largura em pixels */
+                width: 200px;
+                /* Altura em pixels */
+                height: 40px;
+            }
+            select{
+                /* estilo da fonte como negrito */
+                font-weight: bold;
+                /* largura em pixels */
+                width: 200px;
+                /* Altura em pixels */
+                height: 40px;
+            }
+            
+        </style>
+        <script type="text/javascript">
+            function carrega(){
+                var i;
+                var e = ["AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS"
+        ,"MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"];
+                var lista = document.getElementById("Estados");
+                //lista.add(e);
+                for(i = 0 ; i<e.length ; i++)
+                {
+                    var opcao = document.createElement("option");
+                    
+                    opcao.text = e[i];
+                    opcao.value = e[i];
+                    lista.add(opcao);
+                }
+                var item = document.getElementById("Estados").value;
+                
+                
+            }
+            function mostraEstado(){
+               
+                var item = document.getElementById("Estados").value;
+                
+                if(item === "AC")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Acre";
+                }
+                if(item === "AL")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Alagoas";
+                }
+                if(item === "AP")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Amapa";
+                }
+                if(item === "AM")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Amazonas";
+                }
+                if (item === "BA")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Bahia";
+                }
+                if (item === "CE")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Ceara";
+                }
+                if (item === "DF")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Destrito Federal";
+                }
+                if (item === "ES")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Espirito Santo";
+                }
+                if (item === "GO")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Goias";
+                }
+                if (item === "MA")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Maranhao";
+                }
+                if (item === "MT")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Mato Grosso";
+                }
+                if (item === "MS")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Mato Grosso do Sul";
+                }
+                if (item === "MG")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Minas Gerais";
+                }
+                if (item === "PA")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Para";
+                }
+                if (item === "PB")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Paraiba";
+                }
+                if (item === "PR")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Paraná";
+                }
+                if (item === "PE")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Pernambuco";
+                }
+                if (item === "PI")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Piaui";
+                }
+                if (item === "RJ")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Rio de Janeiro";
+                }
+                if (item === "RN")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Rio Grande do Norte";
+                }
+                if (item === "RS")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Rio Grande do Sul";
+                }
+                if (item === "RO")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Rondonia";
+                }
+                if (item === "RR")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Roraima";
+                }
+                if (item === "SP")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "São Paulo";
+                }
+                if (item === "SC")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Santa Catarina";
+                }
+                if (item === "SE")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Sergipe";
+                }
+                if (item === "TO")
+                {
+                    document.getElementById("inf").innerHTML = item + " - " + "Tocantins";
+                }
+                
+            }
+            
+            
+        </script>
+    </head>
+    <body onload="carrega()">
+        <table>
+            <tr>
+                <td>
+                    <label>Selecione o Estado:</label>
+                    
+                </td>    
+                <td><label>O Nome do Estado é:</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name = "Estados" id = "Estados" size = "2" onclick="mostraEstado()">
+                    </select>
+		</td>
+                <td> <label id ="inf"></label></td>
+            </tr>
+        </table>
+            
+    </body>
+    
+</html>
